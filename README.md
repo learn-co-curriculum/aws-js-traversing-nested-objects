@@ -146,63 +146,6 @@ you will see a lot of them as you proceed through the curriculum and in your
 career as a developer. Create your own in the REPL and practice accessing
 various pieces of data.
 
-## Arrays in arrays
-
-Working with nested arrays isn't all that different from nested objects. Simply
-replace the named properties of nested objects with indexes of nested arrays.
-Let's review with an example. Be sure to follow along in the REPL.
-
-**Top Tip:** You may have discovered that, when you're working in the embedded 
-terminal in VS Code or the terminal application on your computer, you can repeat
-the last command you ran by pressing the "up" arrow key. The same is true in the
-REPL console! Give it a try.
-
-Copy the following code into the REPL's code window:
-
-```js
-const letters = ["a", ["b", ["c", ["d", ["e"]], "f"]]];
-```
-
-Given the above nested array, how would we get the letter `'e'`? First, we'd
-need the second element in `letters`, `letters[1]`:
-
-```js
-letters[1];
-//=> ["b", ["c", ["d", ["e"]], "f"]]
-```
-
-Then we'd need the second element of that element, so `letters[1][1]`:
-
-```js
-letters[1][1];
-//=> ["c", ["d", ["e"]], "f"]
-```
-
-Then the second element of **that** element, `letters[1][1][1]`:
-
-```js
-letters[1][1][1];
-//=> ["d", ["e"]]
-```
-
-And the second element of **_that_** element, `letters[1][1][1][1]`:
-
-```js
-letters[1][1][1][1];
-//=> ["e"]
-```
-
-Finally, we want the first element in that final nested array,
-`letters[1][1][1][1][0]`:
-
-```js
-letters[1][1][1][1][0];
-//=> "e"
-```
-
-Whew! That's a lot to keep track of. Just remember that each lookup (each set of
-square brackets) "drills down" into each successive nested array.
-
 ## Conclusion
 
 Structuring data can often be a daunting task, but nesting makes it more approachable
